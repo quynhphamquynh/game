@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi đoán số</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="story">
+            <img src="background.jpg" alt="Background" class="background-image">
+            <div class="character">
+                <img src="character.png" alt="Character">
+            </div>
+            <div class="story-content">
+                
+                <p>Các bạn nhận được một lá thư bí ẩn từ ông chủ nhà cổ. Ông chủ nhà đã tìm thấy một hộp đựng kho báu của gia đình đã bị đánh cắp, nhưng không biết mật khẩu để mở nó. Nhiệm vụ của chúng ta là tìm ra mật khẩu và khám phá kho báu bí ẩn. Hãy sử dụng tư duy, khả năng suy luận và hợp tác để giải quyết câu đố này..</p>
+                <p>Hãy nhập một số từ 1 đến 100 để mở khóa.</p>
+                <p>Chúc các bạn may mắn!</p>
+                
+                <button onclick="batDauTroChoi()">Bắt đầu</button>
+            </div>
+        
+        </div>
+        
+        <div id="game" style="display: none;">
+            <h2>Đoán số để tìm mật khẩu</h2>
+            <p>Nhập một số từ 1 đến 100:</p>
+            <input type="number" id="doan" min="1" max="100">
+            <button onclick="kiemTraDoan()">Kiểm tra</button>
+            <button onclick="hienGoiY()">Gợi ý</button>
+            <p id="thongDiep"></p>
+        </div>
+        <div id="nhapTenForm" style="display: none;">
+            <h2>Chúc mừng!</h2>
+            <p>Bạn đã đoán đúng số! Vui lòng nhập tên của bạn để lưu kết quả:</p>
+            <input type="text" id="hoTen">
+            <button onclick="hienGoogleForm()">Gửi</button>
+            <div id="googleFormContainer"></div>
+        </div>
+    </div>
+    <audio id="amThanhDung">
+        <source src="correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="amThanhSai">
+        <source src="wrong.mp3" type="audio/mpeg">
+    </audio>
+    <script src="game.js"></script>
+    <script>
+        function batDauTroChoi() {
+            document.getElementById('story').style.display = 'none';
+            document.getElementById('game').style.display = 'block';
+        }
+
+        function hienGoogleForm() {
+            var formLink = "https://forms.gle/T69aDpyZDpNFhBbK6"; // Thay LINK_CUA_GOOGLE_FORM bằng liên kết thực của Google Form
+            document.getElementById('googleFormContainer').innerHTML = '<iframe src="' + formLink + '" width="100%" height="500px"></iframe>';
+        }
+    </script>
+</body>
+<audio id="myAudio">
+    <source src="1.mp3" type="audio/mpeg">
+    
+</audio>
+</html>

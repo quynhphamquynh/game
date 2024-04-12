@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    color: #333;
+}
+
+input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#thongDiep {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+/* Thêm các quy tắc CSS cho background và nhân vật */
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.character {
+    position: absolute;
+    bottom: 0; /* Đặt nhân vật ở phía dưới */
+    right: 0; /* Đặt nhân vật ở phía bên phải */
+    margin-bottom: 0px; /* Khoảng cách với cạnh dưới */
+    margin-right: 100px; /* Khoảng cách với cạnh phải */
+}
+
+.character img {
+    width: 400px;
+}
+
+.story-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
